@@ -11,7 +11,7 @@ const reducer = (state = intialState, action) => {
         ...state,
         cart: {
           ...state.cart,
-          content: state.cart.content.concat(action.payload),
+          content: [...state.cart.content.concat(action.payload)],
         },
       }
 
